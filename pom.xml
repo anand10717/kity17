@@ -5,7 +5,13 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>kity</name>
-  <build>
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>3.0.1</version>
+    <scope>provided</scope>
+</dependency> 
+ <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
       <plugin>

@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp org.kity.Hello:/* HelloWorld
+heroku ps:scale web=1

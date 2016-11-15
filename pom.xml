@@ -59,11 +59,10 @@
   		<version>3.0.1</version>
   		<scope>provided</scope>
   	</dependency>
-	<!--<dependency>
+	<dependency>
 		    <groupId>org.apache.spark</groupId>
-		    <artifactId>spark-mllib_2.11</artifactId>
-		    <version>1.5.2</version>
+		    <artifactId>spark-mllib_2.10</artifactId>
+		    <version>1.5.1</version>
 	</dependency>
--->
 </dependencies>
 </project>

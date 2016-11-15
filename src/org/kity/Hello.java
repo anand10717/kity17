@@ -38,7 +38,7 @@ public class Hello extends HttpServlet {
 		try {
 
 			connection = DriverManager.getConnection(
-					"jdbc:postgres://ec2-54-75-230-140.eu-west-1.compute.amazonaws.com:5432/d9hg25jjkrk9ec?user=tkmliwaapruamw&password=XF2bN8pRx1c7bGrWmU5ZHVxPzf");
+					"jdbc:postgres://ec2-54-75-230-140.eu-west-1.compute.amazonaws.com:5432/d9hg25jjkrk9ec","tkmliwaapruamw","XF2bN8pRx1c7bGrWmU5ZHVxPzf");
 
 		} catch (SQLException e) {	
 

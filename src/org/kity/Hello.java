@@ -1,6 +1,8 @@
 package org.kity;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -36,9 +38,16 @@ public class Hello extends HttpServlet {
 		Connection connection = null;
 
 		try {
+			
+		URI dbUri = new URI(System.getenv("postgres://tkmliwaapruamw:XF2bN8pRx1c7bGrWmU5ZHVxPzf@ec2-54-75-230-140.eu-west-1.compute.amazonaws.com:5432/d9hg25jjkrk9ec"));
+
+	    String username = dbUri.getUserInfo().split(":")[0];
+	    String password = dbUri.getUserInfo().split(":")[1];
+	    String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
+
 
 			connection = DriverManager.getConnection(
-					"jdbc:postgres://tkmliwaapruamw:XF2bN8pRx1c7bGrWmU5ZHVxPzf@ec2-54-75-230-140.eu-west-1.compute.amazonaws.com:5432/d9hg25jjkrk9ec?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory","tkmliwaapruamw","XF2bN8pRx1c7bGrWmU5ZHVxPzf");
+					dbUrl,username,password);
 
 		} catch (SQLException e) {	
 
@@ -46,6 +55,9 @@ public class Hello extends HttpServlet {
 			e.printStackTrace();
 			return;
 
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
 		if (connection != null) {

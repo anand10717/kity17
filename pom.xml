@@ -67,6 +67,12 @@
 		<version>9.1-901-1.jdbc4</version>
 	</dependency>
 
+	<!-- https://mvnrepository.com/artifact/org.clojure/java.jdbc -->
+	<dependency>
+	    <groupId>org.clojure</groupId>
+	    <artifactId>java.jdbc</artifactId>
+	    <version>0.6.1</version>
+	</dependency>
 
 	
 </dependencies>

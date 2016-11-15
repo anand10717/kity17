@@ -38,10 +38,10 @@ public class Hello extends HttpServlet {
 		try {
 
 			connection = DriverManager.getConnection(
-					"jdbc:postgres://tkmliwaapruamw:XF2bN8pRx1c7bGrWmU5ZHVxPzf@ec2-54-75-230-140.eu-west-1.compute.amazonaws.com:5432/d9hg25jjkrk9ec", "tkmliwaapruamw",
+					"jdbc:postgres://XF2bN8pRx1c7bGrWmU5ZHVxPzf@ec2-54-75-230-140.eu-west-1.compute.amazonaws.com:5432/d9hg25jjkrk9ec", "tkmliwaapruamw",
 					"XF2bN8pRx1c7bGrWmU5ZHVxPzf");
 
-		} catch (SQLException e) {
+		} catch (SQLException e) {	
 
 			System.out.println("Connection Failed! Check output console");
 			e.printStackTrace();

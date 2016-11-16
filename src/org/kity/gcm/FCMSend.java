@@ -34,7 +34,7 @@ public class FCMSend {
 		info.put("body", message.getBody());
 		
 		json.put("notification", info);
-		json.put("data", message.getData());
+		//json.put("data", message.getData());
 		OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
 		wr.write(json.toString());
 		wr.flush();

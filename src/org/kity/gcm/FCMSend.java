@@ -38,12 +38,12 @@ public class FCMSend {
 		OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
 		wr.write(json.toString());
 		wr.flush();
-		BufferedInputStream inputStreamReader = new BufferedInputStream(conn.getInputStream());
+		/*BufferedInputStream inputStreamReader = new BufferedInputStream(conn.getInputStream());
 	
 		byte[] b = null;
 		while(inputStreamReader.read(b)!=0){
 			System.out.println(b);
 		}
-		
+*/		
 		}
 }

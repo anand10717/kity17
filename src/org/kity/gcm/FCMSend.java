@@ -11,7 +11,7 @@ import org.json.JSONObject;
 public class FCMSend {
 	public static void sendData(Message message,String token_id) throws IOException, JSONException {
 	
-		String serverKey = "AIzaSyBfM0_AtKI2IvkFB7vRm-OTN0E5y_qkdXU";  
+		String serverKey = "AIzaSyBCCC3eOYPqDI2fAuswYLMTMR0We3H-2Ek";  
 		
 		URL url = new URL("https://fcm.googleapis.com/fcm/send");
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();

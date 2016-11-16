@@ -1,6 +1,8 @@
 package org.kity.gcm;
 
+import java.io.BufferedInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -32,11 +34,16 @@ public class FCMSend {
 		info.put("body", message.getBody());
 		
 		json.put("notification", info);
-		//json.put("data", message.getData());
+		json.put("data", message.getData());
 		OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
 		wr.write(json.toString());
 		wr.flush();
-		conn.getInputStream();
+		BufferedInputStream inputStreamReader = new BufferedInputStream(conn.getInputStream());
+	
+		byte[] b = null;
+		while(inputStreamReader.read(b)!=0){
+			System.out.println(b);
+		}
 		
 		}
 }

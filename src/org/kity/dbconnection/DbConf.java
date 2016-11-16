@@ -40,7 +40,7 @@ public class DbConf {
 						e.printStackTrace();
 		}
 
-		try {
+		try {	
 
 			URI dbUri = new URI("postgres://tkmliwaapruamw:XF2bN8pRx1c7bGrWmU5ZHVxPzf@ec2-54-75-230-140.eu-west-1.compute.amazonaws.com:5432/d9hg25jjkrk9ec");
 

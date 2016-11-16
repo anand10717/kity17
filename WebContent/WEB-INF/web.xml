@@ -9,13 +9,36 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
   <servlet>
-  <servlet-name>Hello</servlet-name>
-  <servlet-class>org.kity.Hello</servlet-class>
+    <servlet-name>Hello</servlet-name>
+    <servlet-class>org.kity.Hello</servlet-class>
   </servlet>
   <servlet-mapping>
-  <servlet-name>Hello</servlet-name>
-  <url-pattern>/hello/*</url-pattern>
+    <servlet-name>Hello</servlet-name>
+    <url-pattern>/hello/*</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>Device Register</servlet-name>
+    <servlet-class>org.kity.register.DeviceRegister</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Device Register</servlet-name>
+    <url-pattern>/register/deivce</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>User Register</servlet-name>
+    <servlet-class>org.kity.register.UserRegister</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>User Register</servlet-name>
+    <url-pattern>/register/user</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>SendFCM</servlet-name>
+    <servlet-class>org.kity.gcm.Send</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SendFCM</servlet-name>
+    <url-pattern>/send/user</url-pattern>
   </servlet-mapping>
 </web-app>

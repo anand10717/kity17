@@ -30,13 +30,15 @@ public class FCMSend {
 		
 		json.put("notification", info);
 	//	json.put("data", message.getData());
+				System.out.println(json.toString());
+
 		StringEntity input = new StringEntity(json.toString());
 		input.setContentType("application/json");
 		
 		postRequest.setEntity(input);
 		
 		postRequest.addHeader("Authorization","key="+serverKey);
-		postRequest.addHeader("Content-Type","application/json");
+	//	postRequest.addHeader("Content-Type","application/json");
 		
 		HttpResponse response = httpClient.execute(postRequest);
 

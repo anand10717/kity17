@@ -20,7 +20,7 @@ public class FCMSend {
 		
 		String serverKey = "AIzaSyBCCC3eOYPqDI2fAuswYLMTMR0We3H-2Ek";  
 
-
+		System.out.println(token_id);
 		JSONObject json = new JSONObject();
 		json.put("to",token_id);
 		JSONObject info = new JSONObject();
@@ -40,6 +40,7 @@ public class FCMSend {
 		
 		HttpResponse response = httpClient.execute(postRequest);
 
+		
 		if (response.getStatusLine().getStatusCode() != 201) {
 			throw new RuntimeException("Failed : HTTP error code : "
 				+ response.getStatusLine().getStatusCode());

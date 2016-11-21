@@ -20,7 +20,7 @@ public class FCMSend {
 		
 		String serverKey = "AIzaSyBCCC3eOYPqDI2fAuswYLMTMR0We3H-2Ek";  
 
-		System.out.println(token_id);
+		System.out.println("token ####################"+token_id);
 		JSONObject json = new JSONObject();
 		json.put("to",token_id);
 		JSONObject info = new JSONObject();

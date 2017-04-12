@@ -1,0 +1,211 @@
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="Here You can host details about your College Fetivals.We design websites for college festivals like Symposiums, Tech-Fest, Seminor and culturals.">
+<meta name="keywords"
+	content="College symposiums, Technical Festival, Non-technical Festival, Culturals ,Technical events, Conferences">
+<meta name="google-signin-client_id"
+	content="334782602490-j74b0o0lt00l68gaq2vps9rc7cmfl0v1.apps.googleusercontent.com">
+
+
+<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="custom/css/custom.css">
+
+
+</head>
+<body>
+
+	<header class="bs-docs-nav navbar navbar-default navbar-static-top">
+
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"> College Fest <!-- <img alt="Brand" height="30px" width="80px" src="img/icon.jpg"> -->
+				</a>
+			</div>
+
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li style="background-color: white;"><a href="#">Home</a></li>
+					<li>
+					<li><a href="#">Create Events<span
+							class="glyphicon glyphicon-plus btnicon" aria-hidden="true"></span></a></li>
+					</li>
+					<li><a href="#">Create WebSites</a></li>
+
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false">Event Type <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Technical Fests</a></li>
+							<li><a href="#">Culturals Fests</a></li>
+							<li><a href="#">Management Fests</a></li>
+							<li><a href="#">Sports Events</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Seminor</a></li>
+							<li><a href="#">Conferences</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Paper Presentation</a></li>
+							<li><a href="#">Project Presentation</a></li>
+							<li><a href="#">Workshops</a></li>
+
+						</ul></li>
+
+				</ul>
+
+
+
+				<ul class="nav navbar-nav navbar-right">
+
+					<li>
+						<form class="nav navbar-nav navbar-form navbar-right">
+							<div class="form-group">
+
+								<input type="text" class="form-control" placeholder="Search">
+								<button type="submit" class="btn btn-default">
+									<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+								</button>
+							</div>
+
+						</form>
+					</li>
+					<li><a href="#">SignIn<span
+							class="glyphicon glyphicon-log-in btnicon" aria-hidden="true"></span></a></li>
+
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</header>
+	<div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="g-signin2" data-onsuccess="onSignIn"></div>
+					<!-- <button class="btn" onclick="onSignInFB();">FB</div>
+			 -->
+			 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+			 </fb:login-button>		
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script
+		src="https://apis.google.com/js/platform.js?onload=renderButton" async
+		defer></script>
+
+	<!-- <style type="text/css" src="bs/js/bootstrap.min.js"></style>
+<style type="text/css" src="jq/jquery-3.2.0.min.js"></style> -->
+	<script type="text/javascript">
+   function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+} 
+function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+  function renderButton() {
+      gapi.signin2.render('g-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+     function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    }
+    function onFailure(error) {
+      console.log(error);
+    }
+  </script>
+	<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1279628722074247',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+  function onSignInFB() {
+	  console.log('call login...');
+	  FB.getLoginStatus(function(response) {
+		  if (response.status === 'connected') {
+		    console.log('Logged in.');
+		  }
+		  else {
+		    FB.login();
+		  }
+		});
+  }
+  function checkLoginState() {
+	  FB.getLoginStatus(function(response) {
+		  console.log(response);
+	    statusChangeCallback(response);
+	  });
+	}
+  
+  function statusChangeCallback(response) {
+	    console.log('statusChangeCallback');
+	    console.log(response);
+	    // The response object is returned with a status field that lets the
+	    // app know the current login status of the person.
+	    // Full docs on the response object can be found in the documentation
+	    // for FB.getLoginStatus().
+	    if (response.status === 'connected') {
+	      // Logged into your app and Facebook.
+	      testAPI();
+	    } else {
+	      // The person is not logged into your app or we are unable to tell.
+	      document.getElementById('status').innerHTML = 'Please log ' +
+	        'into this app.';
+	    }
+	  }
+  
+  function testAPI() {
+	    console.log('Welcome!  Fetching your information.... ');
+	    FB.api('/me?fields=name,picture', function(response) {
+	      console.log('Successful login for: ' + response.name);
+	      document.getElementById('status').innerHTML =
+	        'Thanks for logging in, ' + response.name + '!';
+	    });
+	  }
+</script>
+</body>
+</html>

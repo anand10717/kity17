@@ -1,0 +1,17 @@
+nav{
+	height:8%;
+	padding-top:0.75%;
+
+}
+
+.btnicon{
+	margin-left: 5px;
+}
+
+ 
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+ 
